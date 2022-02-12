@@ -1,0 +1,29 @@
+per=int(700)
+lot=int(600)
+bis=int(60)
+tpas=int(160)
+drnk=int(100)
+cname=input('Enter customer name:')
+cphno=input('Enter customer phone number:')
+perq=int(input('Enter no of perfume bottles:')) 
+lotq=int(input('Enter no of lotion bottles:')) 
+bisq=int(input('Enter no of biscut packets:'))
+tpasq=int(input('Enter no of tooth pastes:')) 
+drnkq=int(input('Enter no of drink bottles:'))
+bill=(per*perq)+(lot*lotq)+(bis*bisq)+(tpas*tpasq)+(drnk*drnkq)
+if bill>5000:
+    dis=bill*10/100 
+    tax=0 
+if bill>=3000:
+    dis=bill*8/100 
+    tax=0 
+elif bill>=2000:
+    dis=bill*5/100
+    if bill>=1000:
+       dis=bill*3/100 
+    if bill>=3000:
+           tax=bill*10/100
+else:
+    tax=bill*18/100
+mainbill=bill-dis+tax 
+print('bill amount:',mainbill)
